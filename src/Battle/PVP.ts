@@ -15,8 +15,6 @@ class PVP extends Battle {
     // utilizado while para que a luta ocorra enquanto os pontos de vida dos dois players sejam diferentes de -1
     while (this._player1.lifePoints !== -1
       && this._player2.lifePoints !== -1) {
-      console.log('p1', this._player1.lifePoints, 'p2', this._player2.lifePoints);
-        
       this._player1.attack(this._player2);
       this._player2.attack(this._player1);
     }

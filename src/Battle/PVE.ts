@@ -18,7 +18,6 @@ class PVE extends Battle {
       this._monster.forEach((monster) => {
         this._player1.attack(monster);
         monster.attack(this._player1);
-        console.log('player', this._player1.lifePoints, 'mster', monster.lifePoints);
       });
     }
 
