@@ -13,12 +13,17 @@ class PVE extends Battle {
   }
 
   fight(): number {
-    this._monster.forEach((monster) => {
-      this._player1.attack(monster);
-      monster.attack(this._player1);
-    });
-    // -1 indica vitória do player que não foi o parâmetro, do contrário, é do player parâmetro do super do constructor
-    return this._player1.lifePoints === -1 ? -1 : 1;
+    while (this._player1.lifePoints !== -1
+      && this._monster.every((monster) => monster.lifePoints !== -1)) {
+      this._monster.forEach((monster) => {
+        this._player1.attack(monster);
+        monster.attack(this._player1);
+        console.log('player', this._player1.lifePoints, 'mster', monster.lifePoints);
+      });
+    }
+
+    return super.fight();
+    // return this._player1.lifePoints === -1 ? -1 : 1;
   }
 }
 

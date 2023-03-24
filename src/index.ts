@@ -33,7 +33,7 @@ const pve = new PVE(player1, [monster1, monster2]);
 // função runBattles
 
 const runBattles = (battles: Battle[]) => {
-  battles.map((battle) => battle.fight());
+  battles.forEach((battle) => battle.fight());
 };
 
 export {
