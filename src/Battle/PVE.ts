@@ -20,9 +20,7 @@ class PVE extends Battle {
         monster.attack(this._player1);
       });
     }
-
     return super.fight();
-    // return this._player1.lifePoints === -1 ? -1 : 1;
   }
 }
 

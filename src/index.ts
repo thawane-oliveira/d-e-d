@@ -5,9 +5,9 @@ import Battle, { PVP, PVE } from './Battle';
 
 // 3 objetos do tipo Character
 
-const player1 = new Character('player1');
-const player2 = new Character('player2');
-const player3 = new Character('player3');
+const player1 = new Character('Jolyne');
+const player2 = new Character('Giorno');
+const player3 = new Character('Josuke');
 
 player1.levelUp();
 player1.levelUp();
