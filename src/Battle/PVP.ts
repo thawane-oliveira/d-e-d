@@ -18,8 +18,9 @@ class PVP extends Battle {
       this._player2.attack(this._player1);
     }
 
-    if (this._player1.lifePoints > 0) return 1;
-    return -1;
+    return this._player1.lifePoints === -1 ? -1 : 1;
+
+    // -1 indica vitória do player que não foi o parâmetro, do contrário, é do player parâmetro do super do constructor
   }
 }
 
